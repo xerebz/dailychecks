@@ -6,7 +6,9 @@ import { Calendar } from 'lucide-react';
 const Login: React.FC = () => {
   const signInWithGoogle = () => {
     const provider = new GoogleAuthProvider();
-    signInWithPopup(auth, provider);
+    void signInWithPopup(auth, provider).catch(error => {
+      console.error('Sign in failed:', error);
+    });
   };
 
   return (
