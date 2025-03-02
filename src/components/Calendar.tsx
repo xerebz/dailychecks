@@ -129,7 +129,7 @@ const Calendar: React.FC = () => {
         {days.map((day, index) => (
           <button
             key={index}
-            className={`aspect-square flex items-center justify-center rounded-full border ${
+            className={`aspect-square flex items-center justify-center rounded-full border border-gray-200 ${
               day.date
                 ? day.checked
                   ? "bg-blue-500 text-white"
